@@ -11,10 +11,12 @@ class Tarefa:
         self.prazo = prazo
         self.status = status 
 
-class Conta_Bancaria:
-    def __init__(self, nome, cpf, n_agencia, n_conta, senha_transacao):
-        self.nome = nome
-        self.cpf = cpf
-        self.n_agencia = n_agencia
-        self.n_conta = n_conta
-        self.senha_transacao =  senha_transacao
+class ContaBancaria:
+    def __init__(self, titular, numero_conta, saldo):
+        self.titular = titular
+        self.numero_conta = numero_conta
+        self.saldo = saldo
+
+    def depositar(self, valor):
+        self.saldo += valor
+
