@@ -5,6 +5,15 @@ class Livro:
         self.ano_publicacao = ano_publicacao
         self.genero = genero
 
+    def exibir_info(self):
+        print(self.titulo)
+        print(self.autor)
+        print(self.ano_publicacao)
+        print(self.genero)
+
+livro = Livro("Ítalo e seu Sax", "Ítalo", 2025, "Romance")
+livro.exibir_info()
+
 class Tarefa:
     def __init__(self, descricao, prazo, status):
         self.descricao = descricao
