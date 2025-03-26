@@ -19,6 +19,14 @@ class Tarefa:
         self.descricao = descricao
         self.prazo = prazo
         self.status = status 
+    
+    def exibir_info(self):
+        print(self.descricao)
+        print(self.prazo)
+        print(self.status)
+
+tarefa = Tarefa("Fazer Academia", "De segunda a sexta", "ativo")
+tarefa.exibir_info()
 
 class ContaBancaria:
     def __init__(self, titular, numero_conta, saldo):
@@ -26,6 +34,14 @@ class ContaBancaria:
         self.numero_conta = numero_conta
         self.saldo = saldo
 
-    def depositar(self, valor):
-        self.saldo += valor
+    def exibir_info(self):
+        print(self.titular)
+        print(self.numero_conta)
+        print(self.saldo)
+
+
+contabancaria = ContaBancaria("Ítalo Dantas Santos", 8585977, 5000)
+contabancaria.exibir_info()
+
+
 
