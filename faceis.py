@@ -39,9 +39,9 @@ class ContaBancaria:
         print(self.numero_conta)
         print(self.saldo)
 
-
 contabancaria = ContaBancaria("Ítalo Dantas Santos", 8585977, 5000)
 contabancaria.exibir_info()
+
 
 
 
