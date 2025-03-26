@@ -11,6 +11,13 @@ class Livro:
         print(self.ano_publicacao)
         print(self.genero)
 
+    def verificar_antigo(self):
+        print(self.ano_publicacao < 2000)
+
+    def alterar_titulo(self, novo_titulo):
+        self.titulo = novo_titulo
+        print(self.titulo)
+
 livro = Livro("Ítalo e seu Sax", "Ítalo", 2025, "Romance")
 livro.exibir_info()
 
