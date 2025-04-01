@@ -39,3 +39,11 @@ class Pixel:
 
 pixel = Pixel(60, 50, "Black")
 pixel.exbir_info()
+
+class Jogo:
+    def iniciar(self):
+        print("O jogo começou!")
+meu_jogo = Jogo()
+meu_jogo.iniciar()
+
+
