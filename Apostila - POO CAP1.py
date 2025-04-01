@@ -99,6 +99,28 @@ jogador.usar_energia(20)
 jogador.usar_energia(40)
 jogador.recuperar_energia(30)
 
+#QUESTÃO 10
+class Personagem:
+    def __init__(self, nome):
+        self.nome = nome
+        self.vida = 100
+class Inimigo:
+    def __init__(self, nome):
+        self.nome = nome
+        self.vida = 100
+    def atacar(self, alvo):
+        if alvo.vida > 0:
+            alvo.vida -= 10
+            print(f"{self.nome} atacou {alvo.nome}! A vida de {alvo.nome} agora é {alvo.vida}.")
+        else:
+            print(f"{alvo.nome} já está sem vida!")
+
+personagem = Personagem("Herói")
+inimigo = Inimigo("Vilão")
+inimigo.atacar(personagem)
+inimigo.atacar(personagem)
+
+
 
 
         
