@@ -9,7 +9,7 @@ class Livro:
     
     def get_emprestimos(self):
         return self.__emprestimos
-    def emprestar(self, emprestimo):
+    def emprestar(self):
         if self.get_quantidade_disponivel () > 0:
             self.__emprestimos.append(emprestimo)
         else:
