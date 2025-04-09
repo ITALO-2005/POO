@@ -4,22 +4,24 @@ class Livro:
         self.autor = autor
         self.isbn = isbn
         self.copias_totais = copias_totais
-        self.copias_disponiveis = 0
-        self.emprestimos = []
-    
+        self.emprestimos = []  # Usando lista pública para simplificar
+
     def get_emprestimos(self):
-        return self.__emprestimos
-    
+        return self.emprestimos
+
     def emprestar(self):
-        if self.get_quantidade_disponivel () > 0:
-            self.__emprestimos.append("Livro emprestado")
+        if self.get_disponibilidade() > 0:
+            self.emprestimos.append("Livro emprestado")
+            return "Empréstimo realizado com sucesso!"
         else:
-            print(f"Não há livro disponivel para emprestimo")
+            return "Não há livro disponível para empréstimo."
 
     def devolver(self, emprestimo):
-        self.__emprestimos.remove(emprestimo)
+        if emprestimo in self.emprestimos:
+            self.emprestimos.remove(emprestimo)
+
     def get_disponibilidade(self):
-        return self.copias_totais - len(self.__emprestimos)
+        return self.copias_totais - len(self.emprestimos)
 
     def get_titulo(self):
-        return self.__titulo
+        return self.titulo

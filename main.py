@@ -7,6 +7,5 @@ biblioteca.append(livro1)
 biblioteca.append(livro2)
 
 # Realizando operações
-print(f"Emprestando '{livro1.get_titulo}': {livro1.emprestar()}")
-print(f"Disponibilidade: {livro1.get_disponibilidade}")
-
+print(f"Emprestando '{livro1.get_titulo()}': {livro1.emprestar()}")
+print(f"Disponibilidade: {livro1.get_disponibilidade()}")
