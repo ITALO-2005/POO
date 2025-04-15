@@ -21,3 +21,6 @@ def main():
     print(f"Nome: {pessoa.nome}Idade: {pessoa.idade}")
 
     pessoa.set_idade(-5)
+
+if __name__ == "__main__":
+    main()
