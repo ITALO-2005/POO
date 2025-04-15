@@ -53,4 +53,18 @@ class Pessoa:
         if idade >= 0:
             self.__idade = idade
         else:
-            print("Idade não pode ser um valor Negativo!")
+            print("Idade não pode ser um valor Negativo")
+            
+def main():
+    pessoa = Pessoa()
+    
+    pessoa.set_nome()
+    pessoa.set_idade()
+    
+    print(pessoa.get_nome())
+    print(pessoa.get_idade())
+    pessoa.set_idade(-5)
+    
+if __name__ == "__main__":
+    main()
+
