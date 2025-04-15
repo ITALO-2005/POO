@@ -17,11 +17,7 @@ def main():
     idade = 19
 
     pessoa = Pessoa(nome, idade)
-    
     print("Informações da Pessoa:")
     print(f"Nome: {pessoa.nome}Idade: {pessoa.idade}")
 
     pessoa.set_idade(-5)
-
-if __name__ == "__main__":
-    main()
