@@ -51,9 +51,9 @@ class Funcionario:
         self.bonus += valor
 
     def recalcular_bonus(self):
-        # Subtraindo uma penalidade com base no número de faltas
-        penalidade = self.faltas * 50  # Exemplo: penalidade de 50 por falta
-        self.bonus = max(0, self.bonus - penalidade)  # Evita bônus negativo
+        
+        penalidade = self.faltas * 50  
+        self.bonus = max(0, self.bonus - penalidade) 
 
     def get_id(self):
         return self.id_funcionario
@@ -69,9 +69,44 @@ class Funcionario:
                 f"Faltas: {self.faltas}\n"
                 f"Salário Final: R$ {self.calcular_salario():.2f}")
 
-# Exemplo de uso
 func = Funcionario("João Silva", 123, 2000)
 func.registrar_falta()
 func.adicionar_bonus(500)
 func.recalcular_bonus()
 print(func.resumo())
+
+
+
+#15-04-2025
+class Pessoa:
+    def __init__(self):
+        self.__nome = ""
+        self.__idade = 0
+
+    def get_nome(self):
+        return self.__nome
+
+    def set_nome(self, nome):
+        self.__nome = nome
+
+    def get_idade(self):
+        return self.__idade
+
+    def set_idade(self, idade):
+        if idade >= 0:
+            self.__idade = idade
+        else:
+            print("Idade não pode ser um valor negativo!")
+
+def main():
+    pessoa = Pessoa()
+
+    pessoa.set_nome("João")
+    pessoa.set_idade(25)
+
+    print(f"Nome: {pessoa.get_nome()}")
+    print(f"Idade: {pessoa.get_idade()}")
+    pessoa.set_idade(-5)
+
+if __name__ == "__main__":
+    main()
