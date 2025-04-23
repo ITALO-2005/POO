@@ -26,3 +26,7 @@ class Inimigo:
 
     def atacar(self):
         print(f"O inimigo ataca com força {self.__forca}") 
+        
+#17 Ajuste na classe Jogador:
+
+
