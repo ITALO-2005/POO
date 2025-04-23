@@ -256,17 +256,3 @@ def executar_menu():
             print("Opção inválida. Tente novamente.\n")
 
 executar_menu()
-
-
-
-
-        
-        
-        
-
-
-
-
-
-
-
