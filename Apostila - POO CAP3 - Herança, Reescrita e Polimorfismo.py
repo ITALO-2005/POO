@@ -276,4 +276,49 @@ class SistemaCombate:
         print("Combate encerrado!")
         del self.personagem
         del self.inimigo
+        
+        
+#03 Atributos e Métodos de Classe
+# 56
+class Jogador:
+    total_jogadores = 0
+
+    def __init__(self, nome):
+        self.nome = nome
+        Jogador.total_jogadores += 1
+
+    # 57
+    @classmethod
+    def exibir_total_jogadores(cls):
+        return cls.total_jogadores
+
+# 58
+class Jogo:
+    dificuldade_global = "Média"
+
+    def __init__(self):
+        pass
+
+# 59
+class Personagem:
+    @staticmethod
+    def calcular_dano_base(forca):
+        return forca * 1.5
+
+# 60
+class Loja:
+    preco_itens = 100  
+
+    # 60
+    @classmethod
+    def ajustar_preco_itens(cls, fator):
+        cls.preco_itens *= fator
+
+# 61
+class Fase:
+    tempo_maximo = 30 
+
+    def __init__(self):
+        pass
+
 
